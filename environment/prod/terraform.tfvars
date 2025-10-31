@@ -1,0 +1,5 @@
+name                     = "mystorageprod123"
+location                 = "eastus"
+resource_group_name      = "prod-rg"
+account_replication_type = "LRS"
+account_tier             = "Standard"
