@@ -1,24 +1,17 @@
-variable "name" {
-  description = "The name of the resource group in which to create the storage account."
-  type        = string
-
+variable "rgs" {
+  description = "values for resource groups"
+    type = map(object({
+        resource_group_name = string
+        location            = string
+    }))
 }
-variable "resource_group_name" {
-  description = "The name of the resource group."
-  type        = string
-}
-variable "location" {
-  description = "The location of the storage account."
-  type        = string
-
-}
-variable "account_replication_type" {
-  description = "The replication type of the storage account."
-  type        = string
-
-}
-variable "account_tier" {
-  description = "The tier of the storage account."
-  type        = string
-
+variable "storage_accounts" {
+  description = "values for storage accounts"
+    type = map(object({
+        name                     = string
+        resource_group_name      = string
+        location                 = string
+        account_replication_type = string
+        account_tier             = string
+    }))
 }
